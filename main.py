@@ -61,6 +61,7 @@ def countdown(count):
     canvas.itemconfig(timer_text, text=f"{count_min}:{count_sec}")
     if count > 0:
         timer = window.after(1000, countdown, count - 1)
+        # after position arguments: time in ms, function's name, the arguments of said function
     else:
         start_timer()
         ticks = ""
